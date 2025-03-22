@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+    "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+
+    <module name="TreeWalker">
+
+        <!-- Enforce Javadoc on classes, methods, and fields -->
+    <!--    <module name="JavadocType"/>-->
+    <!--    <module name="JavadocMethod"/>-->
+    <!--    <module name="JavadocVariable"/>-->
+
+        <!-- Naming conventions -->
+        <module name="TypeName">
+            <property name="format" value="^[A-Z][a-zA-Z0-9]*$"/>
+            <message key="name.invalidPattern"
+                     value="Type names must be in PascalCase (e.g., 'MyClass')."/>
+        </module>
+        <module name="LocalVariableName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <message key="name.invalidPattern"
+                     value="Variable names must be in camelCase (e.g., 'myVariable')."/>
+        </module>
+        <module name="MemberName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <message key="name.invalidPattern"
+                     value="Field names must be in camelCase (e.g., 'myField')."/>
+        </module>
+        <module name="MethodName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <message key="name.invalidPattern"
+                     value="Method names must be in camelCase (e.g., 'myMethod')."/>
+        </module>
+        <module name="ConstantName">
+            <property name="format" value="^[A-Z]+(_[A-Z]+)*$"/>
+            <message key="name.invalidPattern"
+                     value="Constant names must be in UPPER_CASE with single underscores (e.g., 'MY_CONSTANT')."/>
+        </module>
+
+        <module name="MagicNumber">
+            <property name="ignoreHashCodeMethod" value="true"/>
+            <property name="ignoreAnnotation" value="true"/>
+        </module>
+
+        <!-- Enforce string literals to be declared in constants -->
+        <module name="MatchXpath">
+            <property name="query"
+                      value="//STRING_LITERAL[not(ancestor::VARIABLE_DEF[./MODIFIERS/LITERAL_STATIC and ./MODIFIERS/FINAL])]"/>
+            <message key="matchxpath.match"
+                     value="String literals must be declared in constants and not used directly."/>
+        </module>
+
+        <!-- Enforce indentation using tabs -->
+        <module name="RegexpSinglelineJava">
+            <property name="format" value="^[ ]+"/>
+            <property name="message" value="Indentation should use tabs, not spaces."/>
+            <property name="ignoreComments" value="true"/>
+        </module>
+
+    </module>
+
+
+
+<!--    <module name="Indentation">-->
+<!--        <property name="tabWidth" value="4"/>-->
+<!--        <property name="basicOffset" value="4"/>-->
+<!--        <property name="braceAdjustment" value="0"/>-->
+<!--        <property name="caseIndent" value="4"/>-->
+<!--    </module>-->
+
+<!--    &lt;!&ndash; Bracket (brace) style &ndash;&gt;-->
+<!--    <module name="LeftCurly">-->
+<!--        <property name="option" value="eol"/>-->
+<!--    </module>-->
+<!--    <module name="RightCurly">-->
+<!--        <property name="option" value="same"/>-->
+<!--    </module>-->
+
+</module>
