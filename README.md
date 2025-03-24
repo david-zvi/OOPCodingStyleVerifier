@@ -41,7 +41,10 @@ java -jar ..\OOPCodingStyleVerifier\checkstyle-10.21.4-all.jar -c ..\OOPCodingSt
 **Important note:** This test ensures the reccomended method limitations (line limit of 40 and parameter limit of 4) are met. This not strictly forbidden in the course, but rather a recommendation to follow in the coding style guidelines, as if a method crosses one of these it can probably be adjusted to stay within them by splitting it up or encapsultaing it's parameters into objects.
 
 ### Legal
-This repository includes an [original jar file](https://github.com/david-zvi/OOPCodingStyleVerifier/blob/main/checkstyle-10.21.4-all.jar) of [Checkstyle's 10.21.4 release](https://github.com/checkstyle/checkstyle/releases/tag/checkstyle-10.21.4) in order to make the setup process easier for students wanting to run this test and are less familiar with the process of installing programs from GitHub. 
+This repository includes an [original, unchanged jar file](https://github.com/david-zvi/OOPCodingStyleVerifier/blob/main/checkstyle-10.21.4-all.jar) of [Checkstyle's 10.21.4 release](https://github.com/checkstyle/checkstyle/releases/tag/checkstyle-10.21.4) in order to make the setup process easier for students wanting to run this test and are less familiar with the process of installing programs from GitHub.
+Checkstyle is licensed under the [GNU-LGPL-v2.1-or-later License](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt), a copy of which is included in [CHECKSTYLE_LICENSE](https://github.com/david-zvi/OOPCodingStyleVerifier/blob/main/CHECKSTYLE_LICENSE). All other files in this repository are a copy of Checkstyle's license and files I created myself.
+The source code for Checkstyle can be found in [their official repository](https://github.com/checkstyle/checkstyle).
+No changes were made to Checkstyle's software.
 
 ### Issues and Contribution
 If you run into any issues running this test, bugs causing incorrect results, or want and try to help configure the code style guidelines not covered currently, feel free to contact me at david-zvi.kadish@mail.huji.ac.il, open an issue, or open a pull request with proposed changes.
