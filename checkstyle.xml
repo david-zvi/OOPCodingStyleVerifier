@@ -130,4 +130,10 @@
         <property name="max" value="110"/>
     </module>
 
+    <!-- Don't check non-Java files -->
+    <module name="SuppressionFilter">
+        <property name="file" value="<PASTE ABSOLUTE PATH TO suppressions.xml HERE"/>
+        <property name="optional" value="false"/>
+    </module>
+
 </module>
