@@ -39,3 +39,6 @@ java -jar ..\OOPCodingStyleVerifier\checkstyle-10.21.4-all.jar -c ..\OOPCodingSt
 - Ensure some tags are followed by descriptions - the only tags supported by CheckStyle for this are @param, @return, @throws, @exception, and @deprecated, which will raise an error when not followed by a description.
 
 **Important note:** This test ensures the reccomended method limitations (line limit of 40 and parameter limit of 4) are met. This not strictly forbidden in the course, but rather a recommendation to follow in the coding style guidelines, as if a method crosses one of these it can probably be adjusted to stay within them by splitting it up or encapsultaing it's parameters into objects.
+
+### Issues and Contribution
+If you run into any issues running this test, bugs causing incorrect results, or want and try to help configure the code style guidelines not covered currently, feel free to contact me at david-zvi.kadish@mail.huji.ac.il, open an issue, or open a pull request with proposed changes.
