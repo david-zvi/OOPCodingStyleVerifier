@@ -5,6 +5,9 @@
 
 <module name="Checker">
 
+    <!-- SET IDE TAB WIDTH IN THIS VALUE -->
+    <property name="tabWidth" value="4"/>
+
     <module name="TreeWalker">
 
         <!-- Naming conventions -->
@@ -54,11 +57,6 @@
             <property name="message"
                       value="Indentation should use tabs, not spaces."/>
             <property name="ignoreComments" value="true"/>
-        </module>
-        <!-- SET IDE TAB WIDTH IN THESE VALUES -->
-        <module name="Indentation">
-            <property name="basicOffset" value="4"/>
-            <property name="tabWidth" value="4"/>
         </module>
 
         <!-- Bracket (brace) style -->
