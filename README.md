@@ -2,8 +2,9 @@
 
 **OOP Coding Style Verifier** is a code style test for (most of) the code style guidelines of HUJI's Object Oriented Programming course.
 This test uses the [Checkstyle Java Code Quality Tool](https://checkstyle.sourceforge.io/) to ensure a set of rules consisting of the course's code style guidelines apply.
+Make sure to pull changes every so often, as there may be bugs I'm not aware of, and I'll push fixes ASAP when I find out about them.
 
-## Setup
+## Setup (make sure to follow these instrutions after every git pull if changes were made!)
 1. Clone this repository to a local directory. Recommendation: If you have a directory with all of your OOP project directories in them, that's a great place to clone it into.
    
 2. If you use an IDE to write your code (such as IntelliJ), make sure it uses tabs for indentation instead of spaces (this test will raise lots of errors if spaces are used). To use tabs instead of spaces for indentation in IntelliJ:
@@ -14,7 +15,7 @@ This test uses the [Checkstyle Java Code Quality Tool](https://checkstyle.source
    
 3. Adjust test to match your tab size: In the Indentation module of checkstyle.xml, enter your tab size as the values of the value parameters (lines 60-61, configured to 4 by default). In IntelliJ, the tab size is configured in File -> Settings -> Editor -> Code Style -> Java -> Tabs and Indents -> Tab Size.
 
-4. In the SuppressionFilter module of checkstyle.xml, copy the absolute path of the suppressions.xml file and paste it in the placeholer` <PASTE ABSOLUTE PATH TO suppressions.xml HERE>` (line 135).
+4. In the SuppressionFilter module of checkstyle.xml, copy the absolute path of the suppressions.xml file and paste it in the placeholer `<PASTE ABSOLUTE PATH TO suppressions.xml HERE>` (line 135).
 
 ## How to run
 Open a terminal, and run this command (replace the '\\' characters with '/' on Linux/Mac):
