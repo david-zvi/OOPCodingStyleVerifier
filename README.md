@@ -1,7 +1,7 @@
 # OOP Coding Style Verifier
 
 **OOP Coding Style Verifier** is a code style test for (most of) the code style guidelines of HUJI's Object Oriented Programming course.
-This test uses the [Checkstyle Java Code Quality Tool](https://checkstyle.sourceforge.io/) to ensure a set of rules consisting of most of the course's code style guidelines apply.
+This test uses the [Checkstyle Java Code Quality Tool](https://checkstyle.sourceforge.io/) to ensure a set of rules consisting of the course's code style guidelines apply.
 
 ## Setup
 1. Clone this repository to local directory. Recommendation: If you have a directory with all your OOP project directories in them, that's a great place to clone it into.
