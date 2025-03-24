@@ -24,7 +24,7 @@ java -jar .<path-to-cloned-directory>\checkstyle-10.21.4-all.jar -c <path-to-clo
 
 If you followed the recommendation in step 1 of setup, this command should work when running this from your project's directory:
 ```
-java -jar ..\OOPCodingStyleVerifier\checkstyle-10.21.4-all.jar -c ..\OOPCodingStyleVerifier\checkstyle.xml <name-of-your-code-directory>
+java -jar ..\OOPCodingStyleVerifier\checkstyle-10.21.4-all.jar -c ..\OOPCodingStyleVerifier\checkstyle.xml .
 ```
 
 ## What this test does not cover
