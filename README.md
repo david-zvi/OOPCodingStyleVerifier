@@ -10,7 +10,7 @@ This test uses the [Checkstyle Java Code Quality Tool](https://checkstyle.source
 
     a. Enable File -> Settings -> Editor -> Code Style -> Java -> Tabs and Indents -> Use tab character
    
-    b. Disable File -> Settings -> Editor -> Code Style -> Detect and use existing file indents for editing (this makes it so if indents by spaces already exist in the file tabs will be spaces no matter what).
+    b. Disable File -> Settings -> Editor -> Code Style -> Detect and use existing file indents for editing (this makes it so if indents by spaces already exist in the file, tabs will be spaces no matter what).
    
 3. Adjust test to match your tab size: In the Indentation module of checkstyle.xml, enter your tab size as the values of the value parameters (lines 60-61, configured to 4 by default). In IntelliJ, the tab size is configured in File -> Settings -> Editor -> Code Style -> Java -> Tabs and Indents -> Tab Size.
 
@@ -27,10 +27,10 @@ java -jar ..\OOPCodingStyleVerifier\checkstyle-10.21.4-all.jar -c ..\OOPCodingSt
 
 ## What this test does not cover
 - Ensure abbreviations and acronyms are not used in names.
-- Ensure logically illegal names not following the naming convention are not used: For example, 'checkandReport' will not be detected as an invalid method name since it follows camelCase for the words 'checkand' and 'report', even though that makes no sense and should be 'checkAndReport', and 'and' is not considered a word in the method name for the same reason.
+- Ensure logically illegal names that do not follow the naming convention are not used: For example, 'checkandReport' will not be detected as an invalid method name since it follows camelCase for the words 'checkand' and 'report', even though that makes no sense and should be 'checkAndReport', and 'and' is not considered a word in the method name for the same reason.
 - Ensure the word 'and' does not appear in comment methods.
 - Ensure proper logic and accuracy of comment contents.
-- Ensure documentation tags appear at the end of JavaDocs. Even though this is pretty intuitive to do ourselves, and JavaDocs are generated with them at the end, it was specifically mentioned to be important in the code style guidelines, so make sure your JavaDocs follow this!
+- Ensure documentation tags appear at the end of JavaDocs. Even though this is pretty intuitive to do ourselves, and JavaDocs are generated with them at the end, it was specifically mentioned to be important in the code style guidelines, so make sure all your JavaDocs follow this!
 - Ensure non-tag class JavaDoc content is valid: Short purpose description, detailed use description, no documentation of class implementation.
 - Ensure class JavaDoc references related classes and methods with @see.
 - Ensure method JavaDocs explain only what the method does and not how it does it, sentence at the beginning of ends with a period ('.').
@@ -38,7 +38,7 @@ java -jar ..\OOPCodingStyleVerifier\checkstyle-10.21.4-all.jar -c ..\OOPCodingSt
 - Allow two related parameters to be used in the same @param tag - the test does not support this, and when generating the JavaDoc with /** separate @param tags are generated for each parameter. If you really want to have two parameters in a single @param, ignore this error when running the test and double check all parameters are documented in @param tags to make sure.
 - Ensure some tags are followed by descriptions - the only tags supported by Checkstyle for this are @param, @return, @throws, @exception, and @deprecated, which will raise an error when not followed by a description.
 
-**Important note:** This test ensures the recommended method limitations (line limit of 40 and parameter limit of 4) are met. This is not strictly forbidden in the course, but rather a recommendation to follow in the coding style guidelines, as if a method crosses one of these it can probably be adjusted to stay within them by splitting it up or encapsultaing its parameters into objects.
+**Important note:** This test ensures the recommended method limitations (line limit of 40 and parameter limit of 4) are met. This is not strictly forbidden in the course, but rather a recommendation to follow in the coding style guidelines, since if a method crosses one of these, it can probably be adjusted to stay within them by splitting the method up or encapsultaing its parameters into objects.
 
 ### Legal
 This repository includes an [original, unchanged jar file](https://github.com/david-zvi/OOPCodingStyleVerifier/blob/main/checkstyle-10.21.4-all.jar) of [Checkstyle's 10.21.4 release](https://github.com/checkstyle/checkstyle/releases/tag/checkstyle-10.21.4) in order to make the setup process easier for students wanting to run this test and are less familiar with the process of installing programs from GitHub.
