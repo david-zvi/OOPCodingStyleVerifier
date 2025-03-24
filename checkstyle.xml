@@ -107,7 +107,7 @@
         <!-- Enforce comments above methods -->
         <module name="MatchXpath">
             <property name="query"
-                      value="//METHOD_DEF[not(MODIFIERS/*[self::SINGLE_LINE_COMMENT or self::BLOCK_COMMENT_BEGIN])]"/>
+                      value="//METHOD_DEF[not(MODIFIERS/*[self::SINGLE_LINE_COMMENT or self::BLOCK_COMMENT_BEGIN]) and not(TYPE/*[self::SINGLE_LINE_COMMENT or self::BLOCK_COMMENT_BEGIN])]"/>
             <message key="matchxpath.match"
                      value="Method declarations must have a preceding comment."/>
         </module>
@@ -132,7 +132,7 @@
 
     <!-- Don't check non-Java files -->
     <module name="SuppressionFilter">
-        <property name="file" value="<PASTE ABSOLUTE PATH TO suppressions.xml HERE"/>
+        <property name="file" value="C:\Users\dzk34\OneDrive\Desktop\University\OOP\OOPCodingStyleVerifier\suppressions.xml"/>
         <property name="optional" value="false"/>
     </module>
 
