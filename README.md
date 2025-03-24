@@ -3,7 +3,7 @@
 **OOP Coding Style Verifier** is a code style test for the code style guidelines of HUJI's Object Oriented Programming course.
 This test uses the [Checkstyle Java Code Quality Tool](https://checkstyle.sourceforge.io/) to ensure a set of rules consisting of most of the course's code style guidelines apply.
 
-## Prerquisites
+## Setup
 1. Clone this repository to local directory. Recommendation: If you have a directory with all your OOP project directories in them, that's a great place to clone it into.
    
 2. If you use an IDE to write your code (such as IntelliJ), make sure it uses tabs for indentation instead of spaces (this test will raise lots of errors if spaces are used). To use tabs instead of spaces for indentation in IntelliJ:
@@ -20,7 +20,7 @@ Open a terminal, and run this command (replace the '\\' characters with '/' on L
 java -jar .<path-to-cloned-directory>\checkstyle-10.21.4-all.jar -c <path-to-cloned-directory>\checkstyle.xml <path-to-your-code-directory>
 ```
 
-If you followed the recommendation in 1, this command should work when running this from your project's directory:
+If you followed the recommendation in step 1 of setup, this command should work when running this from your project's directory:
 ```
 java -jar ..\OOPCodingStyleVerifier\checkstyle-10.21.4-all.jar -c ..\OOPCodingStyleVerifier\checkstyle.xml <name-of-your-code-directory>
 ```
