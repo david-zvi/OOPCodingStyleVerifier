@@ -47,4 +47,4 @@ The source code for Checkstyle can be found in [their official repository](https
 No changes were made to Checkstyle's software.
 
 ### Issues and Contribution
-If you run into any issues running this test, bugs causing incorrect results, or want to try and help configure the code style guidelines not currently covered, feel free to contact me at david-zvi.kadish@mail.huji.ac.il, open an issue, or open a pull request with proposed changes.
+If you run into any issues running this test, bugs causing incorrect results, or want to try and help configure the code style guidelines not currently covered, feel free to contact me at david-zvi.kadish@mail.huji.ac.il, open an issue, or fork the repo and open a pull request with proposed changes.
