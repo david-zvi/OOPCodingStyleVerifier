@@ -4,7 +4,7 @@
 This test uses the [Checkstyle Java Code Quality Tool](https://checkstyle.sourceforge.io/) to ensure a set of rules consisting of the course's code style guidelines apply.
 
 ## Setup
-1. Clone this repository to local directory. Recommendation: If you have a directory with all your OOP project directories in them, that's a great place to clone it into.
+1. Clone this repository to a local directory. Recommendation: If you have a directory with all of your OOP project directories in them, that's a great place to clone it into.
    
 2. If you use an IDE to write your code (such as IntelliJ), make sure it uses tabs for indentation instead of spaces (this test will raise lots of errors if spaces are used). To use tabs instead of spaces for indentation in IntelliJ:
 
@@ -38,7 +38,7 @@ java -jar ..\OOPCodingStyleVerifier\checkstyle-10.21.4-all.jar -c ..\OOPCodingSt
 - Allow two related parameters to be used in the same @param tag - the test does not support this, and when generating the JavaDoc with /** separate @param tags are generated for each parameter. If you really want to have two parameters in a single @param, ignore this error when running the test and double check all parameters are documented in @param tags to make sure.
 - Ensure some tags are followed by descriptions - the only tags supported by Checkstyle for this are @param, @return, @throws, @exception, and @deprecated, which will raise an error when not followed by a description.
 
-**Important note:** This test ensures the reccomended method limitations (line limit of 40 and parameter limit of 4) are met. This not strictly forbidden in the course, but rather a recommendation to follow in the coding style guidelines, as if a method crosses one of these it can probably be adjusted to stay within them by splitting it up or encapsultaing it's parameters into objects.
+**Important note:** This test ensures the recommended method limitations (line limit of 40 and parameter limit of 4) are met. This is not strictly forbidden in the course, but rather a recommendation to follow in the coding style guidelines, as if a method crosses one of these it can probably be adjusted to stay within them by splitting it up or encapsultaing its parameters into objects.
 
 ### Legal
 This repository includes an [original, unchanged jar file](https://github.com/david-zvi/OOPCodingStyleVerifier/blob/main/checkstyle-10.21.4-all.jar) of [Checkstyle's 10.21.4 release](https://github.com/checkstyle/checkstyle/releases/tag/checkstyle-10.21.4) in order to make the setup process easier for students wanting to run this test and are less familiar with the process of installing programs from GitHub.
@@ -47,4 +47,4 @@ The source code for Checkstyle can be found in [their official repository](https
 No changes were made to Checkstyle's software.
 
 ### Issues and Contribution
-If you run into any issues running this test, bugs causing incorrect results, or want and try to help configure the code style guidelines not covered currently, feel free to contact me at david-zvi.kadish@mail.huji.ac.il, open an issue, or open a pull request with proposed changes.
+If you run into any issues running this test, bugs causing incorrect results, or want to try and help configure the code style guidelines not currently covered, feel free to contact me at david-zvi.kadish@mail.huji.ac.il, open an issue, or open a pull request with proposed changes.
