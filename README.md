@@ -1,16 +1,23 @@
-To use tabs in IntelliJ:
-1. Enable File -> Settings -> Editor -> Code Style -> Java -> Tabs and Indents -> Use tab character
-2. Disable File -> Settings -> Editor -> Code Style -> Detect and use existing file indents for editing (this makes it so if indents by spaces already exist in the file tabs will be spaces no matter what).
+# OOP Coding Style Verifier
 
-Adjust test to match IDE's tab size: In the Indentation module of checkstyle.xml, enter your IDE's tab size as the value of the value parameter (lines 60-61, configured to 4 by default).
-In IntelliJ, the tab size can be found in File -> Settings -> Editor -> Code Style -> Java -> Tabs and Indents -> Tab Size
+**OOP Coding Style Verifier** is a code style test for the code style guidelines of HUJI's Object Oriented Programming course.
+This test uses the [Checkstyle Java Code Quality Tool](https://checkstyle.sourceforge.io/) to ensure a set of rules consisting of most of the course's code style guidelines apply.
 
-Worth noting:
-- Method limitations (line limit of 40 and parameter limit of 4) are not strictly a problem, but rather a recommendation to follow in the coding style guidelines, as if they are the case the methods can probably be split up or parameters be encapsulated into objects.
+## Prerquisites
+1. Clone this repository to local directory.
+   
+2. If you use an IDE to write your code (such as IntelliJ), make sure it uses tabs for indentation instead of spaces (this test will raise lots of errors if spaces are used). To use tabs instead of spaces for indentation in IntelliJ:
 
-Not supported:
+    a. Enable File -> Settings -> Editor -> Code Style -> Java -> Tabs and Indents -> Use tab character
+   
+    b. Disable File -> Settings -> Editor -> Code Style -> Detect and use existing file indents for editing (this makes it so if indents by spaces already exist in the file tabs will be spaces no matter what).
+   
+3. Adjust test to match your tab size: In the Indentation module of checkstyle.xml, enter your tab size as the values of the value parameters (lines 60-61, configured to 4 by default). In IntelliJ, the tab size is configured in File -> Settings -> Editor -> Code Style -> Java -> Tabs and Indents -> Tab Size.
+
+## What this test does not cover
 - Ensure abbreviations and acronyms are not used.
 - Ensure logically illegal names not following the naming convention are not used: For example, 'checkandReport' will not be detected as an invalid method name since it follows camelCase for the words 'checkand' and 'report', even though that makes no sense and should be 'checkAndReport', and 'and' is not considered a word in the method name for the same reason.
+- Ensure the word 'and' does not appear in comment methods.
 - Ensure proper logic and accuracy of comment contents.
 - Ensure documentation tags appear at the end of JavaDocs. Even though this is pretty intuitive to do ourselves, it was specifically mentioned to be important in the code style guidelines, so make sure your JavaDocs follow this!
 - Ensure non-tag class JavaDoc content is valid: Short purpose description, detailed use description, no documentation of class implementation.
@@ -20,5 +27,4 @@ Not supported:
 - Allow two related parameters to be used in the same @param tag - the test does not support this, and when generating the JavaDoc with /** separate @param tags are generated for each parameter. If you really want to have two parameters in a single @param, ignore this error when running the test and double check all parameters are documented in @param tags to make sure.
 - Ensure some tags are followed by descriptions - the only tags supported by CheckStyle for this are @param, @return, @throws, @exception, and @deprecated, which will raise an error when not followed by a description.
 
-May be introduced in the future:
-- Ensure the word 'and' does not appear in comment methods.
+**Important note:** This test ensures the reccomended method limitations (line limit of 40 and parameter limit of 4) are met. This not strictly forbidden in the course, but rather a recommendation to follow in the coding style guidelines, as if a method crosses one of these it can probably be adjusted to stay within them by splitting it up or encapsultaing it's parameters into objects.
