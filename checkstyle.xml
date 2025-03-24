@@ -50,7 +50,7 @@
 
         <!-- Enforce indentation using tabs -->
         <module name="RegexpSinglelineJava">
-            <property name="format" value="^\t*[ ]+"/>
+            <property name="format" value="^\t*[ ]+(?!.*[,\)\{]\s*$).*"/>
             <property name="message"
                       value="Indentation should use tabs, not spaces."/>
             <property name="ignoreComments" value="true"/>
