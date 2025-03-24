@@ -4,7 +4,7 @@
 This test uses the [Checkstyle Java Code Quality Tool](https://checkstyle.sourceforge.io/) to ensure a set of rules consisting of most of the course's code style guidelines apply.
 
 ## Prerquisites
-1. Clone this repository to local directory.
+1. Clone this repository to local directory. Recommendation: If you have a directory with all your OOP project directories in them, that's a great place to clone it into.
    
 2. If you use an IDE to write your code (such as IntelliJ), make sure it uses tabs for indentation instead of spaces (this test will raise lots of errors if spaces are used). To use tabs instead of spaces for indentation in IntelliJ:
 
@@ -13,6 +13,17 @@ This test uses the [Checkstyle Java Code Quality Tool](https://checkstyle.source
     b. Disable File -> Settings -> Editor -> Code Style -> Detect and use existing file indents for editing (this makes it so if indents by spaces already exist in the file tabs will be spaces no matter what).
    
 3. Adjust test to match your tab size: In the Indentation module of checkstyle.xml, enter your tab size as the values of the value parameters (lines 60-61, configured to 4 by default). In IntelliJ, the tab size is configured in File -> Settings -> Editor -> Code Style -> Java -> Tabs and Indents -> Tab Size.
+
+## How to run
+Open a terminal, and run this command (replace the '\\' characters with '/' on Linux/Mac):
+```
+java -jar .<path-to-cloned-directory>\checkstyle-10.21.4-all.jar -c <path-to-cloned-directory>\checkstyle.xml <path-to-your-code-directory>
+```
+
+If you followed the recommendation in 1, this command should work when running this from your project's directory:
+```
+java -jar ..\OOPCodingStyleVerifier\checkstyle-10.21.4-all.jar -c ..\OOPCodingStyleVerifier\checkstyle.xml <name-of-your-code-directory>
+```
 
 ## What this test does not cover
 - Ensure abbreviations and acronyms are not used.
