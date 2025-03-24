@@ -14,6 +14,8 @@ This test uses the [Checkstyle Java Code Quality Tool](https://checkstyle.source
    
 3. Adjust test to match your tab size: In the Indentation module of checkstyle.xml, enter your tab size as the values of the value parameters (lines 60-61, configured to 4 by default). In IntelliJ, the tab size is configured in File -> Settings -> Editor -> Code Style -> Java -> Tabs and Indents -> Tab Size.
 
+4. In the SuppressionFilter module of checkstyle.xml, copy the absolute path of the suppressions.xml file and paste it in the placeholer` <PASTE ABSOLUTE PATH TO suppressions.xml HERE>` (line 135).
+
 ## How to run
 Open a terminal, and run this command (replace the '\\' characters with '/' on Linux/Mac):
 ```
