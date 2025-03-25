@@ -35,7 +35,7 @@
                      value="Method names must be in camelCase (e.g., 'myMethod') and not include the word and."/>
         </module>
         <module name="ConstantName">
-            <property name="format" value="^[A-Z]+(_[A-Z]+)*$"/>
+            <property name="format" value="^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$"/>
             <message key="name.invalidPattern"
                      value="Constant names must be in UPPER_CASE with single underscores (e.g., 'MY_CONSTANT')."/>
         </module>
