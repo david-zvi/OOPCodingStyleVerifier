@@ -15,8 +15,6 @@ Make sure to pull changes every so often, as there may be bugs I'm not aware of,
    
 3. Adjust test to match your tab size: In the tabWidth property of the Checker module in checkstyle.xml, set the value to your tab size (line 9). In IntelliJ, the tab size is configured in File -> Settings -> Editor -> Code Style -> Java -> Tabs and Indents -> Tab Size.
 
-4. In the SuppressionFilter module of checkstyle.xml, copy the absolute path of the suppressions.xml file and paste it in the placeholer `<PASTE ABSOLUTE PATH TO suppressions.xml HERE>` (line 133).
-
 ## How to run
 Open a terminal, and run this command (replace the '\\' characters with '/' on Linux/Mac):
 ```
