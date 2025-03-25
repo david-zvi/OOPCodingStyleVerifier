@@ -8,6 +8,9 @@
     <!-- SET IDE TAB WIDTH IN THIS VALUE -->
     <property name="tabWidth" value="4"/>
 
+    <!-- Don't check non-Java files -->
+    <property name="fileExtensions" value="java"/>
+
     <module name="TreeWalker">
 
         <!-- Naming conventions -->
@@ -126,12 +129,6 @@
     <!-- Ensure lines are no longer than 110 characters-->
     <module name="LineLength">
         <property name="max" value="110"/>
-    </module>
-
-    <!-- Don't check non-Java files -->
-    <module name="SuppressionFilter">
-        <property name="file" value="C:\Users\dzk34\OneDrive\Desktop\University\OOP\OOPCodingStyleVerifier\suppressions.xml"/>
-        <property name="optional" value="false"/>
     </module>
 
 </module>
