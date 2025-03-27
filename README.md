@@ -28,7 +28,7 @@ Make sure to pull changes every so often, as there may be bugs I'm not aware of,
 ## How to run
 Open a terminal, and run this command (replace the '\\' characters with '/' on Linux/Mac):
 ```
-java -jar .<path-to-cloned-directory>\checkstyle-10.21.4-all.jar -c <path-to-cloned-directory>\checkstyle.xml <path-to-your-code-directory>
+java -jar <path-to-cloned-directory>\checkstyle-10.21.4-all.jar -c <path-to-cloned-directory>\checkstyle.xml <path-to-your-code-directory>
 ```
 
 If you followed the recommendation in step 1 of setup, this command should work when running this from your project's directory:
