@@ -6,7 +6,7 @@ Make sure to pull changes every so often, as there may be bugs I'm not aware of,
 
 
 ## Setup (make sure to follow these instrutions after every git pull if changes were made!)
-1. Make sure you have git installed and added to your path: You can download git from [here](https://git-scm.com/downloads), follow the guide in the first comment [here](https://stackoverflow.com/questions/4492979/error-git-is-not-recognized-as-an-internal-or-external-command) to add git to your path in Windoes and follow the guide [here](https://graphite.dev/guides/how-to-resolve-the-error-git-is-not-recognized-on-mac) (3. Ensure Git is in your PATH) to add git to your path in Mac. If your using Linux you probably don't need any help here.
+1. Make sure you have git installed and added to your path: You can download git from [here](https://git-scm.com/downloads), follow the guide in the first comment [here](https://stackoverflow.com/questions/4492979/error-git-is-not-recognized-as-an-internal-or-external-command) to add git to your path in Windows and follow the guide [here](https://graphite.dev/guides/how-to-resolve-the-error-git-is-not-recognized-on-mac) (3. Ensure Git is in your PATH) to add git to your path in Mac. If your using Linux you probably don't need any help here.
    
 2. Clone this repository to a local directory: Open a terminal in the directory where you store your OOP project directories, and run
    ```
