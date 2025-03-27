@@ -4,16 +4,26 @@
 This test uses the [Checkstyle Java Code Quality Tool](https://checkstyle.sourceforge.io/) to ensure a set of rules consisting of the course's code style guidelines apply.
 Make sure to pull changes every so often, as there may be bugs I'm not aware of, and I'll push fixes ASAP when I find out about them.
 
+
 ## Setup (make sure to follow these instrutions after every git pull if changes were made!)
-1. Clone this repository to a local directory. Recommendation: If you have a directory with all of your OOP project directories in them, that's a great place to clone it into.
+1. Make sure you have git installed and added to your path: You can download git from [here](https://git-scm.com/downloads), follow the guide in the first comment [here](https://stackoverflow.com/questions/4492979/error-git-is-not-recognized-as-an-internal-or-external-command) to add git to your path in Windoes and follow the guide [here](https://graphite.dev/guides/how-to-resolve-the-error-git-is-not-recognized-on-mac) (3. Ensure Git is in your PATH) to add git to your path in Mac. If your using Linux you probably don't need any help here.
    
-2. If you use an IDE to write your code (such as IntelliJ), make sure it uses tabs for indentation instead of spaces (this test will raise lots of errors if spaces are used). To use tabs instead of spaces for indentation in IntelliJ:
+2. Clone this repository to a local directory: Open a terminal in the directory where you store your OOP project directories, and run
+   ```
+   git clone https://github.com/david-zvi/OOPCodingStyleVerifier.git
+   ```
+   You can clone the repository into any directory you wish, but I'd reccomend to clone it into the directory containing all of your OOP project directories in them to make it easier to use.
+
+3. If you use an IDE to write your code (such as IntelliJ), make sure it uses tabs for indentation instead of spaces (this test will raise lots of errors if spaces are used). To use tabs instead of spaces for indentation in IntelliJ:
 
     a. Enable File -> Settings -> Editor -> Code Style -> Java -> Tabs and Indents -> Use tab character
    
     b. Disable File -> Settings -> Editor -> Code Style -> Detect and use existing file indents for editing (this makes it so if indents by spaces already exist in the file, tabs will be spaces no matter what).
    
-3. Adjust test to match your tab size: In the tabWidth property of the Checker module in checkstyle.xml, set the value to your tab size (line 9). In IntelliJ, the tab size is configured in File -> Settings -> Editor -> Code Style -> Java -> Tabs and Indents -> Tab Size.
+4. Adjust test to match your tab size: In the tabWidth property of the Checker module in checkstyle.xml, set the value to your tab size (line 9). In IntelliJ, the tab size is configured in File -> Settings -> Editor -> Code Style -> Java -> Tabs and Indents -> Tab Size.
+
+**IMPORTANT:** Make sure to run ```git pull``` from the directory you ran ```git clone``` from and follow steps 3-4 again every so often, I'm fixing bugs as they arise and you'll need this to get the latest version. If when running ```git pull``` you get ```Already up to date.``` there's no need to do anything.
+
 
 ## How to run
 Open a terminal, and run this command (replace the '\\' characters with '/' on Linux/Mac):
@@ -25,6 +35,7 @@ If you followed the recommendation in step 1 of setup, this command should work 
 ```
 java -jar ..\OOPCodingStyleVerifier\checkstyle-10.21.4-all.jar -c ..\OOPCodingStyleVerifier\checkstyle.xml .
 ```
+
 
 ## What this test does not cover
 - Ensure abbreviations and acronyms are not used in names.
@@ -41,11 +52,13 @@ java -jar ..\OOPCodingStyleVerifier\checkstyle-10.21.4-all.jar -c ..\OOPCodingSt
 
 **Important note:** This test ensures the recommended method limitations (line limit of 40 and parameter limit of 4) are met. This is not strictly forbidden in the course, but rather a recommendation to follow in the coding style guidelines, since if a method crosses one of these, it can probably be adjusted to stay within them by splitting the method up or encapsultaing its parameters into objects.
 
+
 ### Legal
 This repository includes an [original, unchanged jar file](https://github.com/david-zvi/OOPCodingStyleVerifier/blob/main/checkstyle-10.21.4-all.jar) of [Checkstyle's 10.21.4 release](https://github.com/checkstyle/checkstyle/releases/tag/checkstyle-10.21.4) in order to make the setup process easier for students wanting to run this test and are less familiar with the process of installing programs from GitHub.
 Checkstyle is licensed under the [GNU-LGPL-v2.1-or-later License](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt), a copy of which is included in [CHECKSTYLE_LICENSE](https://github.com/david-zvi/OOPCodingStyleVerifier/blob/main/CHECKSTYLE_LICENSE). All other files in this repository are a copy of Checkstyle's license and files I created myself.
 The source code for Checkstyle can be found in [their official repository](https://github.com/checkstyle/checkstyle).
 No changes were made to Checkstyle's software.
+
 
 ### Issues and Contribution
 If you run into any issues running this test, bugs causing incorrect results, or want to try and help configure the code style guidelines not currently covered, feel free to contact me at david-zvi.kadish@mail.huji.ac.il, open an issue, or fork the repo and open a pull request with proposed changes.
