@@ -31,7 +31,7 @@ Open a terminal, and run this command (replace the '\\' characters with '/' on L
 java -jar <path-to-cloned-directory>\checkstyle-10.21.4-all.jar -c <path-to-cloned-directory>\checkstyle.xml <path-to-your-code-directory>
 ```
 
-If you followed the recommendation in step 1 of setup, this command should work when running this from your project's directory:
+If you followed the recommendation in step 2 of setup, this command should work when running this from your project's directory:
 ```
 java -jar ..\OOPCodingStyleVerifier\checkstyle-10.21.4-all.jar -c ..\OOPCodingStyleVerifier\checkstyle.xml .
 ```
