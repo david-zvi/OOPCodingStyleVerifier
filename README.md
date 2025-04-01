@@ -19,6 +19,8 @@ Make sure to pull changes every so often, as there may be bugs I'm not aware of,
     a. Enable File -> Settings -> Editor -> Code Style -> Java -> Tabs and Indents -> Use tab character
    
     b. Disable File -> Settings -> Editor -> Code Style -> Detect and use existing file indents for editing (this makes it so if indents by spaces already exist in the file, tabs will be spaces no matter what).
+
+If you're using IntelliJ, you can change all existing indentations in a file from using spaces to tabs by selecting all text in the file (ctrl/cmd + A), and then pressing (ctrl/cmd)+(alt/option)+L.
    
 4. Adjust test to match your tab size: In the tabWidth property of the Checker module in checkstyle.xml, set the value to your tab size (line 9). In IntelliJ, the tab size is configured in File -> Settings -> Editor -> Code Style -> Java -> Tabs and Indents -> Tab Size.
 
