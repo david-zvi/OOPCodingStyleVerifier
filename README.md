@@ -42,7 +42,7 @@ java -jar ..\OOPCodingStyleVerifier\checkstyle-10.21.4-all.jar -c ..\OOPCodingSt
 ## What this test does not cover
 - Ensure abbreviations and acronyms are not used in names.
 - Ensure logically illegal names that do not follow the naming convention are not used: For example, 'checkandReport' will not be detected as an invalid method name since it follows camelCase for the words 'checkand' and 'report', even though that makes no sense and should be 'checkAndReport', and 'and' is not considered a word in the method name for the same reason.
-- Ensure the word 'and' does not appear in comment methods.
+- Ensure the word 'and' does not appear in method comments.
 - Ensure proper logic and accuracy of comment contents.
 - Ensure documentation tags appear at the end of JavaDocs. Even though this is pretty intuitive to do ourselves, and JavaDocs are generated with them at the end, it was specifically mentioned to be important in the code style guidelines, so make sure all your JavaDocs follow this!
 - Ensure non-tag class JavaDoc content is valid: Short purpose description, detailed use description, no documentation of class implementation.
