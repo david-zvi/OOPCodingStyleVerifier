@@ -19,6 +19,8 @@ Make sure to pull changes every so often, as there may be bugs I'm not aware of,
     a. Enable File -> Settings -> Editor -> Code Style -> Java -> Tabs and Indents -> Use tab character
    
     b. Disable File -> Settings -> Editor -> Code Style -> Detect and use existing file indents for editing (this makes it so if indents by spaces already exist in the file, tabs will be spaces no matter what).
+
+If you're using IntelliJ, you can change all existing indentations in a file from using spaces to tabs by selecting all text in the file (ctrl/cmd + A), and then pressing (ctrl/cmd)+(alt/option)+L.
    
 4. Adjust test to match your tab size: In the tabWidth property of the Checker module in checkstyle.xml, set the value to your tab size (line 9). In IntelliJ, the tab size is configured in File -> Settings -> Editor -> Code Style -> Java -> Tabs and Indents -> Tab Size.
 
@@ -40,7 +42,7 @@ java -jar ..\OOPCodingStyleVerifier\checkstyle-10.21.4-all.jar -c ..\OOPCodingSt
 ## What this test does not cover
 - Ensure abbreviations and acronyms are not used in names.
 - Ensure logically illegal names that do not follow the naming convention are not used: For example, 'checkandReport' will not be detected as an invalid method name since it follows camelCase for the words 'checkand' and 'report', even though that makes no sense and should be 'checkAndReport', and 'and' is not considered a word in the method name for the same reason.
-- Ensure the word 'and' does not appear in comment methods.
+- Ensure the word 'and' does not appear in method comments.
 - Ensure proper logic and accuracy of comment contents.
 - Ensure documentation tags appear at the end of JavaDocs. Even though this is pretty intuitive to do ourselves, and JavaDocs are generated with them at the end, it was specifically mentioned to be important in the code style guidelines, so make sure all your JavaDocs follow this!
 - Ensure non-tag class JavaDoc content is valid: Short purpose description, detailed use description, no documentation of class implementation.
