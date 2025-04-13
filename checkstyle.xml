@@ -88,6 +88,7 @@
         </module>
         <module name="ParameterNumber">
             <property name="max" value="4"/>
+            <property name="tokens" value="METHOD_DEF"/>
         </module>
 
         <!-- Enforce JavaDoc above public classes + interfaces -->
