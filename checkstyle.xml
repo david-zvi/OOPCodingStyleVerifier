@@ -109,7 +109,7 @@
         <!-- Enforce comments above methods -->
         <module name="MatchXpath">
             <property name="query"
-                      value="//METHOD_DEF[not(MODIFIERS/*[self::SINGLE_LINE_COMMENT or self::BLOCK_COMMENT_BEGIN]) and not(TYPE/*[self::SINGLE_LINE_COMMENT or self::BLOCK_COMMENT_BEGIN])]"/>
+                      value="//METHOD_DEF[not(MODIFIERS//SINGLE_LINE_COMMENT or MODIFIERS//BLOCK_COMMENT_BEGIN) and not(TYPE//SINGLE_LINE_COMMENT or TYPE//BLOCK_COMMENT_BEGIN)]"/>
             <message key="matchxpath.match"
                      value="Method declarations must have a preceding comment."/>
         </module>
